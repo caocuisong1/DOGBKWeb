@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>犬百科</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body id="chbk">
+    <header>
+      <div class="logo">
+        <img src="/picture/transparent.png" alt="Logo" />
+        <h1></h1>
+      </div>
+      <nav>
+        <ul class="list1"> 
+          <li><a href=" ">主页</a></li>
+          <li>
+            <a href="#">关于我们</a>
+            <ul class="list2">
+              <li><a href="#">创建初衷</a></li>
+              <li><a href="#">2</a></li>
+            </ul>
+          </li>
+          <li>
+		 <a href="/type/index.html">狗狗种类</a>
+            <ul class="list3">
+              <li><a href="/type/small/index.html">小型犬</a></li>
+              <li><a href="/type/medium/index.html">中型犬</a></li>
+              <li><a href="/type/large/index.html">大型犬</a></li>
+            </ul>
+          </li>
+          <li><a href="#">精美图片</a></li>
+        </ul>
+        <div class="searchbar">
+          <form action="/search" method="get">
+          <input type="text" placeholder="Search" class="searchbox" />
+          <button class="searchbtn" type="submit">
+            <span>Search</span>
+          </button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <h2 id="demo">欢迎来到犬百科，这里有关于各种狗狗的知识和图片以供您参考。 </h2>
+    <p></p >
+      <script src="myScript.js"></script>
+      <button type="button" onclick="myFunction()">英文</button>
+ <button id="btn-toggle-theme">切换主题</button>
+ <section>
+        <span class="left iconfont icon-anniu_jiantouxiangzuo"></span>
+        <img src="/picture/轮播图2.png"  alt="" id="img">
+        <span class="right iconfont icon-anniu-jiantouxiangyou"></span>
+    </section>
+</html>
+  </body>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+
+    <title>犬百科</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+  </head>
+  <body id="chbk">
+    <header>
+      <div class="logo">
+        <img src="{{ url_for('static', filename='images/transparent.png') }}" alt="Logo">
+        <h1></h1>
+      </div>
+      <nav>
+        <ul class="list1"> 
+          <li><a href="/">主页</a></li>
+          <li>
+            <a href="#">关于我们</a>
+            <ul class="list2">
+              <li><a href="#">创建初衷</a></li>
+              <li><a href="#">2</a></li>
+            </ul>
+          </li>
+          <li>
+		 <a href="/type">狗狗种类</a>
+            <ul class="list3">
+              <li><a href="search?keywords=小型">小型犬</a></li>
+              <li><a href="search?keywords=中型">中型犬</a></li>
+              <li><a href="search?keywords=大型">大型犬</a></li>
+            </ul>
+          </li>
+          <li><a href="/img">精美图片</a></li>
+        </ul>
+        <div class="searchbar">
+          <form action="/search" method="GET">
+          <input type="text" placeholder="Search" class="searchbox" name="keywords" />
+          
+          </form>
+        </div>
+      </nav>
+    </header>
+    <h2 id="demo">欢迎来到犬百科，这里有关于各种狗狗的知识和图片以供您参考。 </h2>
+    <p></p >
+      <script type="text/javascript" src="{{ url_for('static', filename='js/myScript.js') }}"></script>
+      <button type="button" onclick="myFunction()">英文</button>
+ <button id="btn-toggle-theme">切换主题</button>
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+ 
+      <!-- 指示符 -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+     
+      <!-- 轮播图片 -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{ url_for('static', filename='images/轮播图2.png') }}">
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/轮播图3.png') }}">
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/轮播图4.png') }}">
+        </div>
+      </div>
+     
+      <!-- 左右切换按钮 -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+     
+    </div>
+    
+
+</html>
+  </body>

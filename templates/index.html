@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>犬百科</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+
+  </head>
+  <body id="chbk">
+    <header>
+      <div class="logo">
+        <img src="{{ url_for('static', filename='images/transparent.png') }}" alt="Logo">
+        <h1></h1>
+      </div>
+      <nav>
+        <ul class="list1"> 
+          <li><a href="/">主页</a></li>
+          <li>
+            <a href="#">关于我们</a>
+            <ul class="list2">
+              <li><a href="#">创建初衷</a></li>
+              <li><a href="#">2</a></li>
+            </ul>
+          </li>
+          <li>
+		 <a href="/type">狗狗种类</a>
+            <ul class="list3">
+              <li><a href="search?keywords=小型">小型犬</a></li>
+              <li><a href="search?keywords=中型">中型犬</a></li>
+              <li><a href="search?keywords=大型">大型犬</a></li>
+            </ul>
+          </li>
+          <li><a href="/img">精美图片</a></li>
+        </ul>
+        <div class="searchbar">
+          <form action="/search" method="GET">
+          <input type="text" placeholder="Search" class="searchbox" name="keywords" />
+          
+          </form>
+        </div>
+      </nav>
+    </header>
+    <ul>
+        {% for result in results %}
+        <li> <a href="/detail?id={{ result.id }} ">{{ result.name }}, {{ result.alias }}, {{ result.origin }} ,{{ result.coat_length }} ,{{ result.size }} ,{{ result.height}} ,{{ result.weight }} ,{{ result.life_expectancy }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
