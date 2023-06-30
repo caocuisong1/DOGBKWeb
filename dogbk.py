@@ -92,6 +92,13 @@ def type():
     return render_template('type.html')
 
 
+# @app.route('/Aboutus')
+# def About():
+#     # return url_for('static', filename='base.html')
+#     return render_template('Aboutus.html')
+
+
+
 @app.route('/detail')
 def detail():
     id = request.args.get('id')
